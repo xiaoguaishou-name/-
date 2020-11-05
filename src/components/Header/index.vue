@@ -1,7 +1,7 @@
 <template>
   <div>
       <!-- 头部栏 -->
-      <div class="header">
+      <div class="header clearfix">
         <!-- 图片栏 -->
         <div class="logo">
           <img src="./image/header.png" alt="" />
@@ -11,7 +11,7 @@
           <!-- 导航栏左侧 -->
           <ul class="nav-left">
             <li class="nav-left-item">
-              <a>供应链</a>
+              <a class="active">供应链</a>
             </li>
             <li class="nav-left-item">
               <a>财务</a>
@@ -56,11 +56,24 @@
 </script>
 
 <style>
+
 /* 头部栏 */
 .header {
-  width: 1918px;
+  width:100%;
   height: 107px;
   position: relative;
+}
+/* 清除浮动 */
+.header.clearfix:after,
+.header.clearfix:before {
+  content: "";
+  display: none;
+  clear: both;
+}
+/* 图片栏 */
+.header .logo img{
+  width:100%;
+  height:82px;
 }
 /* 导航栏 */
 .header .nav {
@@ -82,6 +95,9 @@
 .header .nav .nav-left .nav-left-item {
   float: left;
   margin-right: 62px;
+}
+.header .nav .nav-left .nav-left-item .active{
+  color: #e1a630;
 }
 /* 导航栏右侧 */
 .header .nav .nav-right {

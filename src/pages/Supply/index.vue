@@ -6,7 +6,7 @@
       <Header></Header>
       <!-- 主要内容区 -->
       <div id="main">
-        <div class="main-header">
+        <div class="main-header clearfix">
           <!-- 左侧栏 -->
           <div class="left">
             <div class="left-item1">
@@ -57,32 +57,47 @@
 </template>
 
 <script>
-import Header from '../../components/Header'
+import Header from "../../components/Header";
 export default {
   name: "Supply",
-  components:{
-    Header
-  }
+  components: {
+    Header,
+  },
 };
 </script>
 
 <style>
+
 /* 外部容器 */
 .container {
-  width: 1920px;
-  height: 1080px;
+  width: 100%;
+  height: 100%;
   background: url(./image/1.png) no-repeat;
+  margin: 0 auto;
 }
 
 /* 主要内容区 */
 .container #main {
   box-sizing: border-box;
-  width: 1890px;
-  height: 959px;
+  width: 100%;
+  height: 100%;
   margin: 2px 18px 12px 12px;
   background: url(./image/kuang.png) no-repeat;
 }
+/* 清除浮动 */
 
+.container #main.clearfix:after,
+.container #main.clearfix:before {
+  content: "";
+  display: none;
+  clear: both;
+}
+.container #main .main-header.clearfix:after,
+.container #main .main-header.clearfix:before {
+  content: "";
+  display: none;
+  clear: both;
+}
 .container #main .main-header {
   position: relative;
 }
