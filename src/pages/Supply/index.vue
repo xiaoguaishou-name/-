@@ -67,39 +67,41 @@ export default {
 </script>
 
 <style>
-
 /* 外部容器 */
 .container {
-  width: 100%;
   height: 100%;
-  background: url(./image/1.png) no-repeat;
-  margin: 0 auto;
+  width:100%;
 }
-
+ 
 /* 主要内容区 */
 .container #main {
   box-sizing: border-box;
-  width: 100%;
-  height: 100%;
+  width: 1890px;
+  height: 959px;
   margin: 2px 18px 12px 12px;
   background: url(./image/kuang.png) no-repeat;
+  background-size: cover;
+  margin:0 auto;
 }
+
 /* 清除浮动 */
 
 .container #main.clearfix:after,
 .container #main.clearfix:before {
   content: "";
-  display: none;
+  display: block;
   clear: both;
 }
+
+.container #main .main-header {
+  position: relative;
+}
+
 .container #main .main-header.clearfix:after,
 .container #main .main-header.clearfix:before {
   content: "";
   display: none;
   clear: both;
-}
-.container #main .main-header {
-  position: relative;
 }
 /* 左侧栏 */
 .container #main .main-header .left {

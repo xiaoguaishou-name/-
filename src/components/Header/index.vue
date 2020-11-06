@@ -12,27 +12,43 @@
           <ul class="nav-left">
             <li class="nav-left-item">
               <a class="active">供应链</a>
+              <ol class="first">
+                <li><a>客户分析</a></li>
+                <li><a>采销分析</a></li>
+                <li><a>库存分析</a></li>
+              </ol>
             </li>
             <li class="nav-left-item">
               <a>财务</a>
+              <ol class="second">
+                <li><a>综合分析</a></li>
+                <li><a>盈亏分析</a></li>
+              </ol>
             </li>
             <li class="nav-left-item">
               <a>人力资源</a>
+              <ol class="third">
+                <li><a>人事变动</a></li>
+                <li><a>人才分析</a></li>
+              </ol>
             </li>
             <li class="nav-left-item">
               <a>价格预测</a>
+              <ol class="fourth">
+                <li><a>定价模型</a></li>
+              </ol>
             </li>
           </ul>
           <!-- 导航栏右侧 -->
           <ul class="nav-right">
             <li class="nav-right-item">
-              <span class="iconfont icon-geren"></span>
-              <a>张一凡</a>
+              <!-- <span class="iconfont icon-geren"></span> -->
+              <a class="iconfont icon-geren">&nbsp;&nbsp;张一凡</a>
             </li>
             <li class="line">|</li>
             <li class="nav-right-item">
-              <span class="iconfont icon-shezhi"></span>
-              <a>注销</a>
+              <!-- <span class="iconfont icon-shezhi"></span> -->
+              <a class="iconfont icon-shezhi">&nbsp;&nbsp;注销</a>
             </li>
             <li class="line">|</li>
             <li class="nav-right-item">
@@ -62,12 +78,13 @@
   width:100%;
   height: 107px;
   position: relative;
+  margin:0 auto;
 }
 /* 清除浮动 */
 .header.clearfix:after,
 .header.clearfix:before {
   content: "";
-  display: none;
+  display: block;
   clear: both;
 }
 /* 图片栏 */
@@ -78,8 +95,10 @@
 /* 导航栏 */
 .header .nav {
   position: absolute;
-  left: 778px;
+  left:870px;
   top: 64px;
+  display: flex;
+  justify-content: space-between;
 }
 .header .nav a {
   font-size: 16px;
@@ -89,23 +108,82 @@
 }
 /* 导航栏左侧 */
 .header .nav .nav-left {
-  float: left;
-  margin-right: 181px;
+  float:left;
+  margin-right:201px;
+  display: flex;
+  justify-content: flex-start;
+  
 }
 .header .nav .nav-left .nav-left-item {
   float: left;
-  margin-right: 62px;
+  margin-right:62px;
 }
 .header .nav .nav-left .nav-left-item .active{
   color: #e1a630;
 }
+/* 二级菜单显示与否 */
+.header .nav .nav-left .nav-left-item .first{
+  position: absolute;
+  z-index:3;
+  display: none;
+  left:-10px; 
+  top:32px;
+} 
+.header .nav .nav-left .nav-left-item .second{
+  position: absolute;
+  z-index:3;
+  display: none;
+  left:90px; 
+  top:32px;
+}
+.header .nav .nav-left .nav-left-item .third{
+  position: absolute;
+  z-index:3;
+  display: none;
+  left:200px; 
+  top:32px;
+}
+.header .nav .nav-left .nav-left-item .fourth{
+  position: absolute;
+  z-index:3;
+  display: none;
+  left:328px; 
+  top:32px;
+}
+.header .nav .nav-left .nav-left-item  ol > li{
+  background: #093350;
+  border: 1px solid #1f6390;
+  box-shadow: 0px 5px 8px 0px rgba(0,0,0,0.1); 
+  padding: 9px;
+}
+/* 小三角 */
+.header .nav .nav-left .nav-left-item  ol > li:before{
+  content:"";
+  position: absolute;
+  z-index: 3;
+  top: -5px;
+  left:50%;
+  width: 0;
+  height: 0;
+  margin-left:-6px;
+  border-width:0 6px 6px;
+  border-style:solid;
+  border-color:rgba(0,0,0,0) rgba(0,0,0,0) #1f6390;
+}
+.header .nav .nav-left .nav-left-item  ol > li a{
+  font-size: 12px;
+}
+.header .nav .nav-left .nav-left-item:hover > ol{
+  display: block;
+}
 /* 导航栏右侧 */
 .header .nav .nav-right {
   float: right;
+  display: flex;
+  justify-content: flex-end;
 }
 .header .nav .nav-right .nav-right-item {
   box-sizing: border-box;
-  float: left;
   width: 115px;
   height: 29px;
 }
