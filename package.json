@@ -11,6 +11,7 @@
     "@njleonzhang/postcss-px-to-rem": "^1.0.1",
     "core-js": "^3.6.5",
     "echarts": "^4.9.0",
+    "element-ui": "^2.14.0",
     "html-webpack-inline-plugin": "0.0.4",
     "lib-flexible-for-dashboard": "^1.0.2",
     "vue": "^2.6.11"

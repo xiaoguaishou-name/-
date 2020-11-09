@@ -75,7 +75,29 @@
           <!-- 中间内容区 -->
           <div class="mainItem">
             <div class="customer">客户排名</div>
-            <div class="rectangle"></div>
+            <div class="rectangle">
+              <div class="info">
+                <div class="info-left">
+                  <div class="fullName">
+                    <span>当前客户信息：王&nbsp;五</span>
+                  </div>
+                  <div class="firstNum">3</div>
+                  <i>,</i>
+                  <div class="secondNum">7</div>
+                  <div class="thirdNum">1</div>
+                  <div class="fourthNum">1</div>
+                </div>
+                <div class="info-right">
+                  <a>填报入口</a>
+                </div>
+              </div>
+              <!-- <el-progress :text-inside="true" :stroke-width="22" :percentage="70" color="#fcb018"></el-progress>
+               -->
+               <div>
+                 <div></div>
+                 <div></div>
+               </div>
+            </div>
           </div>
           <!-- 右侧栏 -->
           <div class="right">
@@ -87,6 +109,22 @@
                   <span>多元化采购能力</span>
                   <i>3</i>
                 </div>
+                <!-- <div class="dash">
+                </div> -->
+                <ul class="graphical">
+                  <li>
+                   <span>大料</span> 
+                  </li>
+                  <li>
+                    <span>中料</span>
+                  </li>
+                  <li>
+                    <span>小料</span>
+                  </li>
+                  <li>
+                    <span>焦面</span>
+                  </li>
+                </ul>
               </div>
               <div class="right-item2">
                 <div class="drive">
@@ -130,9 +168,55 @@
                 </div>
               </div>
             </div>
-            <div class="footer-item">
+            <div class="footer-item2">
               <div class="credit">采购均价</div>
-              <div class="coverage"></div>
+              <div class="coverage2">
+                <div class="coverage2-left">
+                  <ul class="secondary">
+                    <li class="jack">
+                     <span>中料</span> 
+                    </li>
+                    <li class="mary">
+                      <i>4532</i>
+                    </li>
+                    <li class="jack">
+                      <span>轻质化煤焦油1</span>
+                    </li>
+                    <li class="mary">
+                      <i>4953</i>
+                    </li>
+                    <li class="jack">
+                      <span>轻质化煤焦油2</span>
+                    </li>
+                    <li class="mary">
+                      <i>3802</i>
+                    </li>
+                  </ul>
+                  <div class="reduce">
+                    <img src="./image/27.png" alt="">
+                  </div>
+                  <div class="price">
+                    <div class="price-left">季度销售均价</div>
+                    <div class="price-right">0</div>
+                  </div>
+                </div>
+                <div class="coverage2-right">
+                  <div class="bery">
+                    <img src="./image/29.png" alt="">
+                  </div>
+                  <div class="cery">
+                    <span>5</span>
+                  </div>
+                  <div class="dery">
+                    <img src="./image/23.png" alt="">
+                  </div>
+                  <div class="eery">
+                    <img src="./image/19.png" alt="">
+                    <span>3865</span>
+                    <i>采购均价</i>
+                  </div>
+                </div>
+              </div>
             </div>
             <div class="footer-item">
               <div class="credit">客户类型</div>
@@ -396,7 +480,91 @@ export default {
 .container #main .main-header .mainItem .rectangle {
   box-sizing: border-box;
   height: 566px;
+  /* background: #235464; */
   border: 1px solid #235464;
+}
+.container #main .main-header .mainItem .rectangle .info{
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  margin:40px 21px 0 21px;
+}
+.container #main .main-header .mainItem .rectangle .info .info-left{
+  display: flex;
+  font-size: 18px;
+  color:#18e3ed;
+}
+.container #main .main-header .mainItem .rectangle .info .info-left .fullName{
+  margin-right:10px;
+}
+.container #main .main-header .mainItem .rectangle .info .info-left .firstNum{
+  position: absolute;
+  top:-14px;
+  left:178px;
+  width: 28px;
+  height: 40px;
+  line-height: 40px;
+  color: #19f1f9;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: DIN Alternate Bold, DIN Alternate Bold-Bold;
+  opacity: 0.67;
+  border:1px solid #5a9cff;
+  text-align: center;
+}
+.container #main .main-header .mainItem .rectangle .info .info-left > i{
+  position: absolute;
+  top:9px;
+  left:212px;
+}
+.container #main .main-header .mainItem .rectangle .info .info-left .secondNum{
+  position: absolute;
+  top:-14px;
+  left:218px;
+  width: 28px;
+  height: 40px;
+  line-height: 40px;
+  color: #19f1f9;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: DIN Alternate Bold, DIN Alternate Bold-Bold;
+  opacity: 0.67;
+  border:1px solid #5a9cff;
+  text-align: center;
+}
+.container #main .main-header .mainItem .rectangle .info .info-left .thirdNum{
+  position: absolute;
+  top:-14px;
+  left:252px;
+  width: 28px;
+  height: 40px;
+  line-height: 40px;
+  color: #19f1f9;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: DIN Alternate Bold, DIN Alternate Bold-Bold;
+  opacity: 0.67;
+  border:1px solid #5a9cff;
+  text-align: center;
+}
+.container #main .main-header .mainItem .rectangle .info .info-left .fourthNum{
+  position: absolute;
+  top:-14px;
+  left:286px;
+  width: 28px;
+  height: 40px;
+  line-height: 40px;
+  color: #19f1f9;
+  font-size: 20px;
+  font-weight: bold;
+  opacity: 0.67;
+  border:1px solid #5a9cff;
+  text-align: center;
+}
+.container #main .main-header .mainItem .rectangle .info .info-right > a{
+  text-decoration: underline;
+  font-size: 16px;
+  color: #18e3ed;
 }
 /* 右侧栏 */
 .container #main .main-header .right {
@@ -415,6 +583,7 @@ export default {
   background: url(./image/background\ -right.png) no-repeat;
 }
 .container #main .main-header .right .right-item1 .circular {
+  position: relative;
   box-sizing: border-box;
   width: 453px;
   height: 279px;
@@ -422,6 +591,7 @@ export default {
 }
 .container #main .main-header .right .right-item1 .circular .smallLogo{
   position: relative;
+  z-index: 3;
   width: 227px;
   height: 52px;
   margin: 39px 113px 0;
@@ -444,6 +614,110 @@ export default {
   left:182px;
   font-size: 30px;
   color:#32fdf6;
+}
+.container #main .main-header .right .right-item1 .circular .graphical{
+  display: flex;
+}
+.container #main .main-header .right .right-item1 .circular .graphical > li:nth-child(1){
+  position: relative;
+  width: 84px;
+  height: 84px;
+  border-radius: 50%;
+  border-width:1px;
+  border-style: dashed;
+  opacity: 0.3;
+  border-color: #ffffff;
+  margin:80px 21px 0 32px;
+}
+.container #main .main-header .right .right-item1 .circular .graphical > li:nth-child(1) > span{
+  position: absolute;
+  text-align: center;
+  top:12px;
+  left:10px;
+  height: 63px;
+  line-height: 63px;
+  width: 63px;
+  font-size: 16px;
+  font-family: PingFang SC Semibold, PingFang SC Semibold-Semibold;
+  font-weight: bold;
+  color:#07233f;
+  border-radius: 50%;
+  background-color: #fff;
+}
+.container #main .main-header .right .right-item1 .circular .graphical > li:nth-child(2){
+  position: relative;
+  width: 84px;
+  height: 84px;
+  border-radius: 50%;
+  border-width:1px;
+  border-style: dashed;
+  border-color:#fb6f38;
+  margin:80px 20px 0 0;
+}
+.container #main .main-header .right .right-item1 .circular .graphical > li:nth-child(2) > span{
+  position: absolute;
+  text-align: center;
+  top:12px;
+  left:10px;
+  height: 63px;
+  line-height: 63px;
+  width: 63px;
+  font-size: 16px;
+  font-family: PingFang SC Semibold, PingFang SC Semibold-Semibold;
+  font-weight: bold;
+  color:#07233f;
+  border-radius: 50%;
+  background-color: #fb6f38;
+}
+.container #main .main-header .right .right-item1 .circular .graphical > li:nth-child(3){
+  position: relative;
+  width: 84px;
+  height: 84px;
+  border-radius: 50%;
+  border-width:1px;
+  border-style: dashed;
+  border-color:#f1e291;
+  margin:80px 21px 0 0;
+}
+.container #main .main-header .right .right-item1 .circular .graphical > li:nth-child(3) > span{
+  position: absolute;
+  text-align: center;
+  top:12px;
+  left:10px;
+  height: 63px;
+  line-height: 63px;
+  width: 63px;
+  font-size: 16px;
+  font-family: PingFang SC Semibold, PingFang SC Semibold-Semibold;
+  font-weight: bold;
+  color:#07233f;
+  border-radius: 50%;
+  background-color: #f1e291;
+}
+.container #main .main-header .right .right-item1 .circular .graphical > li:nth-child(4){
+  position: relative;
+  width: 84px;
+  height: 84px;
+  border-radius: 50%;
+  border-width:1px;
+  border-style: dashed;
+  border-color:#62dbe4;
+  margin:80px 0 0 0;
+}
+.container #main .main-header .right .right-item1 .circular .graphical > li:nth-child(4) > span{
+  position: absolute;
+  text-align: center;
+  top:12px;
+  left:10px;
+  height: 63px;
+  line-height: 63px;
+  width: 63px;
+  font-size: 16px;
+  font-family: PingFang SC Semibold, PingFang SC Semibold-Semibold;
+  font-weight: bold;
+  color:#07233f;
+  border-radius: 50%;
+  background-color: #62dbe4;
 }
 .container #main .main-header .right .right-item2 {
   height: 271px;
@@ -469,12 +743,16 @@ export default {
   margin: 10px 49px;
   position: relative;
 }
+.container #main .main-header .right .right-item2 .drive .drive-main > img{
+  width:100%;
+  height:100%;
+}
 .container #main .main-header .right .right-item2 .drive .drive-main > span{
   position: absolute;
   color:#fff;
   font-size: 30px;
-  top:84px;
-  left:58px;
+  top:74px;
+  left:54px;
 }
 /* 底部栏 */
 .container #main .footer {
@@ -487,8 +765,12 @@ export default {
   justify-content: space-between;
 }
 .container #main .footer .footer-item {
-  width: 32.8%;
+  width:530px;
 }
+.container #main .footer .footer-item2{
+  width:729px;
+}
+/* 底部三栏头部 */
 .container #main .footer .footer-item .credit {
   box-sizing: border-box;
   width: 100%;
@@ -498,6 +780,16 @@ export default {
   padding: 13px 0 11px 22px;
   background: url(./image/background\ -footer.png) no-repeat;
 }
+.container #main .footer .footer-item2 .credit {
+  box-sizing: border-box;
+  width: 100%;
+  height: 43px;
+  font-size: 18px;
+  color: #ffffff;
+  padding: 13px 0 11px 22px;
+  background: url(./image/30.png) no-repeat;
+}
+/* 底部左右栏样式 */
 .container #main .footer .footer-item .coverage {
   display: flex;
   justify-content: space-around;
@@ -579,5 +871,140 @@ export default {
   font-family: PingFang SC Regular, PingFang SC Regular-Regular;
   font-weight: 400;
   color: #fff;
+}
+/* 底部中间栏样式 */
+.container #main .footer .footer-item2 .coverage2{
+  box-sizing: border-box;
+  border: 1px solid #235464;
+  display: flex;
+}
+
+.container #main .footer .footer-item2 .coverage2 .coverage2-left{
+  box-sizing: border-box;
+  width: 274px;
+  height: 201px;
+  border:1px dashed #03feff;
+  margin:14px 0 14px 39px;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 6px;
+}
+.container #main .footer .footer-item2 .coverage2 .coverage2-left .secondary{
+  margin:6px 0 6px 6px;
+  border:1px solid #03feff;
+}
+.container #main .footer .footer-item2 .coverage2 .coverage2-left .secondary .jack{
+  width: 139px;
+  height: 30px;
+  font-size: 14px;
+  line-height: 30px;
+  color:#fff;
+  text-align: center;
+  background:linear-gradient(#0d96b1 0%, #00b294 100%);
+}
+.container #main .footer .footer-item2 .coverage2 .coverage2-left .secondary .mary{
+  width: 139px;
+  height: 30px;
+  font-size: 16px;
+  line-height: 36px;
+  text-align: center;
+  color: #03feff;
+}
+.container #main .footer .footer-item2 .coverage2 .coverage2-left .reduce{
+  width: 30px;
+  height: 30px;
+  margin:auto;
+}
+.container #main .footer .footer-item2 .coverage2 .coverage2-left .reduce > img{
+  width: 100%;
+  height: 100%;
+}
+.container #main .footer .footer-item2 .coverage2 .coverage2-left .price{
+  box-sizing: border-box;
+  width: 74px;
+  height: 124px;
+  border: 1px solid #03feff;
+  margin:auto;
+  display: flex;
+}
+.container #main .footer .footer-item2 .coverage2 .coverage2-left .price .price-left{
+  box-sizing: border-box;
+  width: 32px;
+  height: 122px;
+  text-align: center;
+  background: linear-gradient(#0d96b1 0%, #00b294 100%);
+  font-size: 14px;
+  padding: 10px 9px;
+  color:#fff;
+}
+.container #main .footer .footer-item2 .coverage2 .coverage2-left .price .price-right{
+  width:50px;
+  height: 122px;
+  line-height: 122px;
+  text-align: center;
+  font-size: 20px;
+  color:#fff;
+}
+.container #main .footer .footer-item2 .coverage2 .coverage2-right{
+  /* position: relative; */
+  display: flex;
+}
+.container #main .footer .footer-item2 .coverage2 .coverage2-right .bery{
+  width: 30px;
+  height: 30px;
+  margin: 100px 0 99px 17px;
+}
+.container #main .footer .footer-item2 .coverage2 .coverage2-right .bery > img{
+  width: 100%;
+  height: 100%;
+}
+.container #main .footer .footer-item2 .coverage2 .coverage2-right .cery{
+  position: relative;
+  box-sizing: border-box;
+  width: 50px;
+  height: 50px;
+  border: 1px solid #32fdf6;
+  border-radius: 50%;
+  margin:90px 0 89px 17px;
+}
+.container #main .footer .footer-item2 .coverage2 .coverage2-right .cery > span{
+  position: absolute;
+  top:9px;
+  left:17px;
+  font-size: 24px;
+  color:#03feff;
+}
+.container #main .footer .footer-item2 .coverage2 .coverage2-right .dery{
+  width: 47px;
+  height: 23px;
+  margin:104px 0 102px 26px;
+}
+.container #main .footer .footer-item2 .coverage2 .coverage2-right .dery > img{
+  width: 100%;
+  height: 100%;
+}
+.container #main .footer .footer-item2 .coverage2 .coverage2-right .eery{
+  position: relative;
+  width: 179px;
+  height: 179px;
+  margin:25px 39px 25px 12px;
+}
+.container #main .footer .footer-item2 .coverage2 .coverage2-right .eery > img{
+  width: 100%;
+  height: 100%;
+}
+.container #main .footer .footer-item2 .coverage2 .coverage2-right .eery > span{
+  position: absolute;
+  top:60px;
+  left:58px;
+  font-size: 26px;
+  color:#32fdf6;
+}
+.container #main .footer .footer-item2 .coverage2 .coverage2-right .eery > i{
+  position: absolute;
+  top:100px;
+  left:58px;
+  font-size: 16px;
+  color:#fff;
 }
 </style>
