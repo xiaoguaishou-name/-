@@ -1410,7 +1410,7 @@ export default {
 .container #main .footer .footer-item .coverage .chart .money {
   box-sizing: border-box;
   position: absolute;
-  bottom: 21px;
+  bottom: 17px;
   left: -30px;
   width: 200px;
   height: 47px;
@@ -1434,7 +1434,7 @@ export default {
 .container #main .footer .footer-item .coverage .chart .group {
   box-sizing: border-box;
   position: absolute;
-  bottom: 21px;
+  bottom: 17px;
   left: -30px;
   width: 200px;
   height: 47px;
