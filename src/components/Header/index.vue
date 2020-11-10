@@ -45,16 +45,16 @@
               <!-- <span class="iconfont icon-geren"></span> -->
               <a class="iconfont icon-geren">&nbsp;&nbsp;张一凡</a>
             </li>
-            <li class="line">|</li>
+            <!-- <li class="line">|</li> -->
             <li class="nav-right-item">
               <!-- <span class="iconfont icon-shezhi"></span> -->
               <a class="iconfont icon-shezhi">&nbsp;&nbsp;注销</a>
             </li>
-            <li class="line">|</li>
+            <!-- <li class="line">|</li> -->
             <li class="nav-right-item">
               <a class="large">22：30：05</a>
             </li>
-            <li class="line">|</li>
+            <!-- <li class="line">|</li> -->
             <li class="nav-right-item">
               <img src="./image/yuce.png" />
               <a>价格预测</a>
@@ -169,6 +169,7 @@
   border-width:0 6px 6px;
   border-style:solid;
   border-color:rgba(0,0,0,0) rgba(0,0,0,0) #1f6390;
+  /* border-color: transparent transparent #1f6390; */
 }
 .header .nav .nav-left .nav-left-item  ol > li a{
   font-size: 12px;
@@ -183,17 +184,48 @@
   justify-content: flex-end;
 }
 .header .nav .nav-right .nav-right-item {
+  position: relative;
   box-sizing: border-box;
   width: 115px;
   height: 29px;
 }
-.header .nav .nav-right .line {
+.header .nav .nav-right .nav-right-item:nth-of-type(2){
+  width: 95px;
+  height: 29px;
+}
+.header .nav .nav-right .nav-right-item:nth-of-type(3){
+  width:165px;
+  height:29px;
+}
+.header .nav .nav-right .nav-right-item:nth-of-type(3) > a {
+  line-height: 20px;
+  font-size: 20px;
+}
+/* 左边第一条线无 */
+.header .nav .nav-right .nav-right-item:nth-of-type(1):before{
+  position: absolute;
+  content:"";
+  width: 0px;
+  height:0px;
+  background-color:#3dc0e7 ;
+}
+/* 伪类线 */
+.header .nav .nav-right .nav-right-item::before{
+  position: absolute;
+  left:-22px;
+  top:0;
+  content:"";
+  width: 1px;
+  height:20px;
+  background-color:#3dc0e7 ;
+}
+/* .header .nav .nav-right .line {
   float: left;
   width: 1px;
   color: #3dc0e7;
   height: 30px;
   margin: 0 24px 0 -12px;
-}
+} */
 .header .nav .nav-right .nav-right-item .iconfont {
   font-size: 16px;
   color: #3dc0e7;
